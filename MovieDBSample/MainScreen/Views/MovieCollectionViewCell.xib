@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+        <array key="SFPRODISPLAYBOLD.OTF">
+            <string>SFProDisplay-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionViewCellIdentifier" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModule="MovieDBSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="426" height="374"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="426" height="374"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQj-6u-aQh">
+                        <rect key="frame" x="0.0" y="0.0" width="426" height="374"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-a2-YnZ">
+                        <rect key="frame" x="16" y="319.5" width="394" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="V9m-9z-SMb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjU-tn-ohI">
+                        <rect key="frame" x="16" y="287.5" width="394" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="4eU-s2-Jf2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EQj-6u-aQh" secondAttribute="bottom" id="BzR-Kq-yaC"/>
+                <constraint firstItem="gvF-a2-YnZ" firstAttribute="top" secondItem="MjU-tn-ohI" secondAttribute="bottom" constant="8" id="EYm-FV-SzN"/>
+                <constraint firstItem="EQj-6u-aQh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HEF-6u-FRd"/>
+                <constraint firstItem="gvF-a2-YnZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="VnX-p1-gAs"/>
+                <constraint firstAttribute="trailing" secondItem="MjU-tn-ohI" secondAttribute="trailing" constant="16" id="cdT-ye-3Hu"/>
+                <constraint firstAttribute="trailing" secondItem="EQj-6u-aQh" secondAttribute="trailing" id="mtq-zA-l7g"/>
+                <constraint firstItem="MjU-tn-ohI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="pfv-I4-yfT"/>
+                <constraint firstAttribute="bottom" secondItem="gvF-a2-YnZ" secondAttribute="bottom" constant="40" id="u2o-NH-NrY"/>
+                <constraint firstAttribute="trailing" secondItem="gvF-a2-YnZ" secondAttribute="trailing" constant="16" id="zHo-OC-ilJ"/>
+                <constraint firstItem="EQj-6u-aQh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zz1-qV-IZV"/>
+            </constraints>
+            <size key="customSize" width="426" height="374"/>
+            <connections>
+                <outlet property="cellImageView" destination="EQj-6u-aQh" id="uiR-eS-ITe"/>
+                <outlet property="overViewLabel" destination="gvF-a2-YnZ" id="gt5-Ph-NK2"/>
+                <outlet property="titleLabel" destination="MjU-tn-ohI" id="J2O-rt-uFc"/>
+            </connections>
+            <point key="canvasLocation" x="92.753623188405811" y="135.9375"/>
+        </collectionViewCell>
+    </objects>
+</document>
